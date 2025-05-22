@@ -57,7 +57,7 @@ if st.button("Classify"):
     if user_input.strip() == "":
         st.warning("Please enter some text.")
     else:
-        preprocessed = preprocess(input_text)
+        preprocessed = preprocess(user_input)
         results = {}
         for label, model in models.items():
             vect = vectorizers[label].transform([preprocessed])
