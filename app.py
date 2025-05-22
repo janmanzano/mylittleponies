@@ -54,7 +54,7 @@ st.title("Multi-label Hate Speech Classifier")
 user_input = st.text_area("Enter a comment to classify")
 
 if st.button("Classify"):
-    if input_text.strip() == "":
+    if user_input.strip() == "":
         st.warning("Please enter some text.")
     else:
         preprocessed = preprocess(input_text)
